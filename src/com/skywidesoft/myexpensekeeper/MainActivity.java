@@ -1,8 +1,10 @@
 package com.skywidesoft.myexpensekeeper;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
 public class MainActivity extends Activity {
 
@@ -10,6 +12,11 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+        WebView myWebView = (WebView) findViewById(R.id.expenseWebView);
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        myWebView.loadUrl("http://clarenceho-my-expense-keeper.jit.su/#/");
 	}
 
 	@Override
