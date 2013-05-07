@@ -8,7 +8,7 @@ import android.webkit.WebView;
 
 public class MainActivity extends Activity {
 
-	private static final String APP_URL = "http://clarenceho-my-expense-keeper.jit.su/#/";
+	private static final String APP_URL = "https://clarenceho-my-expense-keeper.jit.su/#/";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,8 @@ public class MainActivity extends Activity {
         WebView myWebView = (WebView) findViewById(R.id.expenseWebView);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        ExpenseWebViewClient wvc = new ExpenseWebViewClient();
+        myWebView.setWebViewClient(wvc);
         myWebView.loadUrl(APP_URL);
 	}
 
