@@ -1,7 +1,6 @@
 package com.skywidesoft.myexpensekeeper;
 
 import android.app.Activity;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.webkit.GeolocationPermissions;
