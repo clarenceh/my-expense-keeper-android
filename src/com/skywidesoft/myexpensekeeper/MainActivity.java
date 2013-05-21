@@ -1,8 +1,11 @@
 package com.skywidesoft.myexpensekeeper;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
+import android.webkit.GeolocationPermissions;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -18,8 +21,19 @@ public class MainActivity extends Activity {
         WebView myWebView = (WebView) findViewById(R.id.expenseWebView);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setGeolocationEnabled(true);
+        webSettings.setGeolocationDatabasePath("/data/data/my-expense-keeper");
+        webSettings.setAppCacheEnabled(true);
+        webSettings.setDatabaseEnabled(true);
+        webSettings.setDomStorageEnabled(true);
         ExpenseWebViewClient wvc = new ExpenseWebViewClient();
         myWebView.setWebViewClient(wvc);
+        myWebView.setWebChromeClient(new WebChromeClient(){
+        	  public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
+        	    // callback.invoke(String origin, boolean allow, boolean remember);
+        	    callback.invoke(origin, true, false);
+        	  }
+        	});
         myWebView.loadUrl(APP_URL);
 	}
 
