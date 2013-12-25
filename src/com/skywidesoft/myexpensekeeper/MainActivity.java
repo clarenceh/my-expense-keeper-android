@@ -10,7 +10,7 @@ import android.webkit.WebView;
 
 public class MainActivity extends Activity {
 
-	private static final String APP_URL = "https://clarenceho-my-expense-keeper.jit.su/#/";
+	private static final String APP_URL = "https://myexpensekeeper.skywidesoft.com/#/";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

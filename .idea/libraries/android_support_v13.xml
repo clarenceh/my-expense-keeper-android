@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="android-support-v13">
+    <CLASSES>
+      <root url="jar://C:/java/adt-bundle-windows-x86_64-20131030/sdk/extras/android/support/v13/android-support-v13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://C:/java/adt-bundle-windows-x86_64-20131030/sdk/extras/android/support/v13/src/ics" />
+      <root url="file://C:/java/adt-bundle-windows-x86_64-20131030/sdk/extras/android/support/v13/src/ics-mr1" />
+      <root url="file://C:/java/adt-bundle-windows-x86_64-20131030/sdk/extras/android/support/v13/src/java" />
+    </SOURCES>
+  </library>
+</component>
